@@ -3,17 +3,6 @@ body {
 
 }
 
-element.style {
-	height: 100px;
-}
-
-.box {
-	height: 280px;
-	color: grey;
-	border: 1px dotted black;
-	background-color: #babdc1;
-	width: 80%;
-}
 
 .rowA, .rowB {
 
