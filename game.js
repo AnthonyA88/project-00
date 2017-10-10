@@ -1,63 +1,63 @@
+var winner = false;
+
+
 $(document).ready(function(){
 
 	const car1 = $('#car1');
 	const car2 = $('#car2');
+	// $("#car1").animate({left: "+=300"}, 1000);
+	// $('car1').keydown("margin-left": speed 2000);
+	// $('car2').animate({right: "+=200"}, 2000);
+
+
 
 });
 
-alert("Get ready!");
+// setTimeout(function(){ alert("Get ready, set, go!"); }, 3000);
 
 //make a click function for the game to start with a countdown
 console.log("does this work?")
 
 $('img').on("click", function(){
+	console.log("clicked image")
 
 })
+
+//Make a function to start the race
 
 
 $(document).on('keydown', drive);
 
 function drive(event){
-	if (event.keyCode == 83) {
+	console.log(event.key);
+	if (event.key === "s") {
+		$('#car1').css('left', '+=20');
+		console.log("inside s")
+		winner=true;
 	//this is the keycode for using S as the accelerator player 1
 	//make cars to move at 5 px per click
-} else  if (event.keyCode == 76) {
+} else  if (event.key === "l") {
+		$('#car2').css('left', '+=20');
 	//this is the keycode for using L as the accelerator player 2
 }
 
 }
 
-//Make starting point for race with countdown
-
-function countDown(start){
-
-	console.log("get ready");
-	setTimeout(function() {
-		alert("Get ready!"); 
-	}, 2000);
-}
-
-
-
-
-
 //Make ending point for race/winning criteria
 var winning = function() {
 	//if user clicks car past finish line
-}
+ console.log("Did I win?");
+};
+	//if player goes past 50 clicks they win
+// if (car1 === 1000) {
+// 	alert("You win!") 
+//  winner = true;
+// } else{
+// 	$("#car1").css('margin-left': car1);
+// 	car1 += 20;
+// }
 
-function movePlayers(player){
-  //remove classes for player1-playing and player2-playing from current divs
-  //and add them to the next sibling div
-  if(player === "p1"){
-  $('.player1-playing').removeClass("player1-playing").next().addClass('player1-playing fadeIn')
-  }
-  if(player === "p2"){
-    $('.player2-playing').removeClass("player2-playing").next().addClass('player2-playing')
-  }
-  //run a calculateWinner function
-  // calculateWinner("p1", "p2")
-}
+
 
 
 
